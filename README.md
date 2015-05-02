@@ -44,12 +44,32 @@ This is the written material that accompanies XKE.
 
 9. Cold vs hot observables
 
+10. What FRP is not
+  * A solution for problems you can't already solve
+  * Well-support by most languages mainly due to constructs and features they support
+  * IT IS NOT REACT.JS
 
+11. What is FRP? few definitions
+  1. Haskell definition -> https://wiki.haskell.org/Functional_Reactive_Programming
+    > Functional Reactive Programming (FRP) integrates time flow and compositional events into functional programming.
 
+  2. Wikipedia definition -> http://en.wikipedia.org/wiki/Functional_reactive_programming
+    > Functional reactive programming (FRP) is a programming paradigm for reactive programming (asynchronous dataflow programming) using the building blocks of functional programming (e.g. map, reduce, filter).
+
+12. Common domains where FRP is useful -- GUI, robotics, music industry,
+
+13. FRP makes it easy to combine time stream with value stream to form a thing stream.
+
+14. Compare approaches
+
+| OLD     | FRP |
+| :------------- | :------------- |
+| ``` on_click(function(e){ log(e.position)  })``` |``` clicks.map(e -> log(e.position))``` |
+
+15. Composition allows you to compose streams using other streams
+
+16. Everything is a stream 
 
 ##Resources
 
 1. A playful introduction to Rx by Eric Meijer https://www.youtube.com/watch?v=qIT8HLLZbtw
-
-2.
-# functional-reactive-programming-xke
