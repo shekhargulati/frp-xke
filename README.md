@@ -40,7 +40,7 @@ This is the written material that accompanies XKE.
 
 7. The difference between Observable and Stream is that in Observable you do not have to ask for values in the stream they are delivered asynchronously.
 
-8. Spreadhseet is mother of all reactive programming -- you change a value and all the related cells change
+8. Spreadsheet is mother of all reactive programming -- you change a value and all the related cells change
 
 9. Cold vs hot observables
 
@@ -68,8 +68,27 @@ This is the written material that accompanies XKE.
 
 15. Composition allows you to compose streams using other streams
 
-16. Everything is a stream 
+16. Everything is a stream
+
+17. Interactive is opposite of reactive programming. This is what we are used to.
+
+18. Interacting == pulling whereas reactive == pushing
+
+19. Iterators and Observables are mathematical dual. This means you can define all the iterator operations on Observables
+
+20. Rx is reactive extensions -- created by Eric Meijer
+
+21. Reactive manifesto -- take reactive programming principles to build reactive applications
 
 ##Resources
 
 1. A playful introduction to Rx by Eric Meijer https://www.youtube.com/watch?v=qIT8HLLZbtw
+
+
+## Demo applications
+
+1. Sentiment analysis of twitter stream
+
+2. Website that monitors uptime of web applications
+
+3.  
