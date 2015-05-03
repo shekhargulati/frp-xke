@@ -56,6 +56,12 @@ This is the written material that accompanies XKE.
   2. Wikipedia definition -> http://en.wikipedia.org/wiki/Functional_reactive_programming
     > Functional reactive programming (FRP) is a programming paradigm for reactive programming (asynchronous dataflow programming) using the building blocks of functional programming (e.g. map, reduce, filter).
 
+  3. Another definition
+    > FRP is a different way to solve problems related to event sourcing. It helps you write event-driven logic in a composable and modular way.
+
+  4. It is replacement of Observer pattern, which is usually implemented using callbacks or listeners.
+
+
 12. Common domains where FRP is useful -- GUI, robotics, music industry,
 
 13. FRP makes it easy to combine time stream with value stream to form a thing stream.
@@ -79,6 +85,24 @@ This is the written material that accompanies XKE.
 20. Rx is reactive extensions -- created by Eric Meijer
 
 21. Reactive manifesto -- take reactive programming principles to build reactive applications
+
+22. Functional Reactive programming is an intersection of functional programming and reactive programming. Reactive programming is not same as functional reactive programming.
+
+23. FRP applies functional programming principles and practices to Reactive programming. The basic idea behind reactive programming is that there are certain datatypes that represent a value "over time". For more refer http://stackoverflow.com/a/1028642
+
+24. Explain Observer pattern -- Ancient way to write reactive applications where consumers register themselves with the producer.For more http://en.wikipedia.org/wiki/Observer_pattern
+
+25. Why observer pattern should be depricated?
+  * http://stackoverflow.com/questions/11619680/why-should-the-observer-pattern-be-deprecated
+  * Depreciating the Observer Pattern paper http://infoscience.epfl.ch/record/176887/files/DeprecatingObservers2012.pdf
+
+26. FRP is a form of dataflow programming. Dataflow programming is defined in terms of directed graph as opposed to linear Von Neumann model. To learn more about Dataflow programming refer to this paper http://paginas.fe.up.pt/~prodei/dsie12/papers/paper_17.pdf
+
+27. FRP helps you focus on What then How. What style of programming is called declarative programming. How style of programming is called  imperative programming.
+
+28. FRP is based on event streams, a stream that produces events along a timeline.
+
+29.
 
 ##Resources
 
