@@ -10,6 +10,18 @@ This is the written material that accompanies XKE.
 2. Streams -- Java 8
 
 
+## Basics of Functional programming
+
+1. **Higher order functions:**
+
+2. **Lambda expressions:**
+
+3. **Referential transparency or purity:** A function should not have any side effects and it should return the same value each time you call it with same arguments.
+
+4. **Immutability:**
+
+5. **Recursion:**
+
 ## Topics
 
 1. Start with Iterable -- Mother of all streams
@@ -102,7 +114,26 @@ This is the written material that accompanies XKE.
 
 28. FRP is based on event streams, a stream that produces events along a timeline.
 
-29.
+29. Observables allows you to work with collections asynchronously where as future allows you to work with one value asynchronously.
+
+|| One | Many     |
+| :------------- | :------------- |
+| Sync| T       | Iterable<T>     |
+|Async| Future<T> | Observable<T>    |
+
+30. Reactive programming is the next logical step to functional programming. Functional programming is about composition and lazy evaluation.
+
+31. Rx is suitable for scenarios where you have to react to events i.e. your data is push based not pull based. Possible usecases:
+  * UI events like mouse move, clicks etc
+  * Domain events like property changed, user created, registered, etc.
+  * Infrastructure events
+
+32. There are two key types in Rx -- Observable and Observer
+
+33. Rx allows you to query data in motion
+
+34. Think of anything that implements Observable as stream of events. In RxJava Observable is a class.
+
 
 ##Resources
 
