@@ -1,4 +1,4 @@
-package org.shekhar.xke.frp.examples;
+package org.shekhar.xke.frp.venkat_talk;
 
 import rx.Observable;
 

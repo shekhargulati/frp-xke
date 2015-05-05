@@ -134,6 +134,14 @@ This is the written material that accompanies XKE.
 
 34. Think of anything that implements Observable as stream of events. In RxJava Observable is a class.
 
+35. Observable API methods can be grouped in four categories:
+  * Creational -- create, timer, interval, from
+  * Filtering
+  * Aggregation
+  * Transformation
+
+36. 
+
 
 ##Resources
 

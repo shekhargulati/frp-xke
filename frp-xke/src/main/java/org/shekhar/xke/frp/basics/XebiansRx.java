@@ -1,4 +1,4 @@
-package org.shekhar.xke.frp;
+package org.shekhar.xke.frp.basics;
 
 import rx.Observable;
 
