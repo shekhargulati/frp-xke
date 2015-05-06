@@ -13,8 +13,6 @@ public class Example9 {
         naturalNumbers.take(10).map(val -> factorial(val)).subscribe(val -> System.out.println(String.format("first %s %s", val, Thread.currentThread().getName())));
         naturalNumbers.take(10).map(val -> val + 10).subscribe(val -> System.out.println(String.format("second %s %s", val, Thread.currentThread().getName())));
 
-        while (true) {
-        }
     }
 
     private static long factorial(Long number) {

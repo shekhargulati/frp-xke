@@ -136,12 +136,7 @@ import java.util.stream.LongStream;
 public class Example4 {
 
     public static void main(String[] args) {
-        LongStream.iterate(1, val -> val + 1).peek(val -> {
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-            }
-        }).forEach(System.out::println);
+        LongStream.iterate(1, val -> val + 1).forEach(System.out::println);
     }
 
 }
