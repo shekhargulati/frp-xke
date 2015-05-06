@@ -1,4 +1,4 @@
-package org.shekhar.xke.frp.excercises;
+package org.shekhar.xke.frp.my_samples;
 
 import rx.Observable;
 import rx.functions.Action1;

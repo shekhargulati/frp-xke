@@ -140,7 +140,21 @@ This is the written material that accompanies XKE.
   * Aggregation
   * Transformation
 
-36. 
+36. Iterable vs Observable
+
+| Event     | Iterable(Pull)     | Observable(push)|
+| :------------- | :------------- ||
+| retrieve data       | T next()       |onNext()|
+| discover error| throw Exception | onError(Throwable)|
+|complete|returns|onCompeleted|
+
+37. Lambdas are functions that can be used as method arguments -- higher order function
+
+38. The basic building blocks of reactive code are Observables and Subscribers. An Observable emits items; a Subscriber consumes those items.
+
+39. This looks a lot like your standard observer pattern, but it differs in one key way - Observables often don't start emitting items until someone explicitly subscribes to them.
+
+40. 
 
 
 ##Resources
