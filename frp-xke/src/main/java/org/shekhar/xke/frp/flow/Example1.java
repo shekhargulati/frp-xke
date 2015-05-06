@@ -1,6 +1,7 @@
 package org.shekhar.xke.frp.flow;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -9,7 +10,7 @@ import java.util.List;
 public class Example1 {
 
     public static void main(String[] args) {
-        List<Long> naturalNumbers = naturalNumbers(100);
+        List<Long> naturalNumbers = naturalNumbersR(100);
         for (Long naturalNumber : naturalNumbers) {
             System.out.println(naturalNumber);
         }
@@ -21,6 +22,16 @@ public class Example1 {
             naturalNumbers.add(i);
         }
         return naturalNumbers;
+    }
+
+
+    public static List<Long> naturalNumbersR(long n){
+        if (n == 0){
+            return new ArrayList<>();
+        }
+        List<Long> xs = naturalNumbersR(n - 1);
+        xs.add(n);
+        return xs;
     }
 
 }

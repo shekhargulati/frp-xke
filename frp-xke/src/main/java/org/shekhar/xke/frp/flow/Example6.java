@@ -1,7 +1,6 @@
 package org.shekhar.xke.frp.flow;
 
 import rx.Observable;
-import rx.schedulers.Schedulers;
 
 public class Example6 {
 
@@ -9,11 +8,13 @@ public class Example6 {
         Observable<String> xlteam = Observable.just("shekhar", "sameer", "aditya", "ankur");
 
 
-        xlteam.subscribeOn(Schedulers.newThread()).subscribe(name -> System.out.println("first .. I met " + name));
-        xlteam.subscribe(name -> System.out.println("second .. I met " + name));
+        xlteam.subscribe(name -> System.out.println("first .. I met " + name), error -> System.out.println("error " + error), () -> System.out.println("********first completed*******"));
+
+
+        xlteam.subscribe(name -> System.out.println("second .. I met " + name),error -> System.out.println("error " + error), () -> System.out.println("********second completed*******"));
 
         Observable<String> xlteamWithS = xlteam.map(String::toUpperCase).filter(name -> name.startsWith("S"));
-        xlteamWithS.subscribe(name -> System.out.println("I met XL team member with name starting with S. He is " + name));
+        xlteamWithS.subscribe(name -> System.out.println("I met XL team member with name starting with S. He is " + name),error -> System.out.println("error " + error), () -> System.out.println("********third completed*******"));
 
         xlteam.mergeWith(xlteamWithS).subscribe(name -> System.out.println("I met all... " + name));
     }
