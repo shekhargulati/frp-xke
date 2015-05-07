@@ -28,6 +28,8 @@ public class SentimentAnalyzer_2 {
         Observable<String> negativeTweets = tweetStream.filter(SentimentAnalyzer_2::isNegativeTweet);
 
         negativeTweets.window(30, TimeUnit.SECONDS).subscribe(val -> val.count().subscribe(count -> System.out.println("Negative tweets in 30 seconds " + count)));
+
+        negativeTweets.filter(tweet -> tweet.toLowerCase().contains("bad")).window(1, TimeUnit.MINUTES).subscribe(val -> val.count().subscribe(count -> System.out.println("bad tweets per one minute " + count)));
     }
 
     private static boolean isNegativeTweet(String tweet) {
