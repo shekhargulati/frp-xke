@@ -9,6 +9,7 @@ import twitter4j.Status;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
 public class SentimentAnalyzer_2 {
 
@@ -18,15 +19,15 @@ public class SentimentAnalyzer_2 {
     public static void main(String[] args) {
         ConnectableObservable<Status> observable = TweetObservable.tweetObservable(new String[]{"Salman Khan", "Messi"}).publish();
         observable.connect();
-        Observable<String> tweetStream = observable.<String>flatMap(status -> Observable.create(sub -> sub.onNext(status.getText())));
+        Observable<String> tweetStream = observable.map(status -> status.getText());
 
-        Observable<String> positiveTweets = tweetStream.filter(tweet -> isPositiveTweet(tweet));
+        Observable<String> positiveTweets = tweetStream.filter(SentimentAnalyzer_2::isPositiveTweet);
 
-        positiveTweets.count().subscribe(val -> System.out.println("Tweet count " + val));
+        positiveTweets.window(30, TimeUnit.SECONDS).subscribe(val -> val.count().subscribe(count -> System.out.println("Positive tweets in 30 seconds " + count)));
 
-        Observable<String> negativeTweets = tweetStream.filter(tweet -> isNegativeTweet(tweet));
+        Observable<String> negativeTweets = tweetStream.filter(SentimentAnalyzer_2::isNegativeTweet);
 
-        negativeTweets.count().subscribe(val -> System.out.println("Tweet count " + val));
+        negativeTweets.window(30, TimeUnit.SECONDS).subscribe(val -> val.count().subscribe(count -> System.out.println("Negative tweets in 30 seconds " + count)));
     }
 
     private static boolean isNegativeTweet(String tweet) {
