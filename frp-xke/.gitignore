@@ -64,5 +64,6 @@ hs_err_pid*
 
 frp-xke.iml
 target/*
-
+positives.txt
+negatives.txt
 

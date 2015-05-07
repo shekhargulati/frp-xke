@@ -10,7 +10,7 @@ import java.util.List;
 public class Example1 {
 
     public static void main(String[] args) {
-        List<Long> naturalNumbers = naturalNumbersR(100);
+        List<Long> naturalNumbers = naturalNumbers(100);
         for (Long naturalNumber : naturalNumbers) {
             System.out.println(naturalNumber);
         }
